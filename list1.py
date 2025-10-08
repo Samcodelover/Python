@@ -72,7 +72,15 @@ def bubble_sort(words):
 # Hint: use a custom key= function to extract the last element form each tuple.
 def sort_last(tuples):
   # +++your code here+++
-  return
+  stuples = tuples.copy()
+  n =len(tuples)
+  for i in range(n - 1):
+      for j in range(n - 1, 0, -1):
+          if stuples[j][-1] < stuples[j - 1][-1]:
+              stuples[j], stuples[j - 1] = stuples[j - 1], stuples[j]
+
+
+  return stuples
 
 
 # Simple provided test() function used in main() to print
