@@ -1,4 +1,4 @@
-print("Enter a text: !")
+print("Enter a text: !!")
 text = input()
 text = text.lower()
 dict = {}
