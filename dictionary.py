@@ -1,4 +1,4 @@
-print("Enter a text: !")
+print("Enter a text: ")
 text = input()
 text = text.lower()
 dict = {}
@@ -10,7 +10,7 @@ for word in words:
         dict[word] += 1
     else:
         dict[word] = 1
-print(dict)
+print(sorted(dict.items(), key=lambda item: item[1], reverse=True)[:5])
 
 
 

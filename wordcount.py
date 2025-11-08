@@ -26,7 +26,7 @@ so the most common word is first, then the next most common, and so on.
 
 Use str.split() (no arguments) to split on all whitespace.
 
-Workflow: don't build the whole program at once.Instead identify just a first milestone,
+Workflow: don't build the whole program at once. Instead, identify just a first milestone,
 e.g. "well the first step is to extract the list of words." Write the code to
 get to that milestone, and just print your data structures at that point, and
 then you can do a sys.exit(0) so the program does not run ahead into its
@@ -50,6 +50,37 @@ import sys
 # You could write a helper utility function that reads a file
 # and builds and returns a word/count dict for it.
 # Then print_words() and print_top() can just call the utility function.
+
+
+
+def print_words(filename):
+
+    text = open(filename, 'r').read().lower()
+
+    dict = {}
+    words = text.split()
+
+    for word in words:
+        if word in dict:
+            dict[word] += 1
+        else:
+            dict[word] = 1
+    print(dict)
+
+
+
+def print_top(filename):
+    text = open(filename, 'rt')
+    text = text.read().lower()
+    dict = {}
+    words = text.split()
+
+    for word in words:
+        if word in dict:
+            dict[word] += 1
+        else:
+            dict[word] = 1
+    print(sorted(dict.items(), key=lambda item: item[1], reverse=True)[:20])
 
 ###
 
