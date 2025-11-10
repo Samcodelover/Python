@@ -41,7 +41,7 @@ When that's working, try for the next milestone.
 Optional: define a helper function to avoid code duplication inside
 print_words() and print_top().
 
-"""
+"""""
 
 import sys
 
