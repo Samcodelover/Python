@@ -7,6 +7,7 @@ for c in    range(1, 5) :
     chore = input()
 
     if chore == "stop" :
+
         break
     if chore == "delete" :
         print("put the list number which you wanna delete:")
